@@ -1,0 +1,27 @@
+{
+  "name": "defolt",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "resolve-url": "^0.2.1",
+    "urix": "^0.1.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "1 time",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xio9/defolt.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xio9/defolt/issues"
+  },
+  "homepage": "https://github.com/xio9/defolt#readme"
+}
