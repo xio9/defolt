@@ -1,8 +1,10 @@
+// Set-ExecutionPolicy RemoteSigned -Scope Process 
+
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 
 gulp.task('hello', function(done) {
-    console.log('Привет бичара!');
+    console.log('Привет!');
     done();
 } );
 
