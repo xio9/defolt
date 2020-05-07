@@ -1,4 +1,4 @@
-*{
+ *{ 
     box-sizing: border-box;
 }
 
@@ -10,7 +10,6 @@ body{
 
 .header{
     width: 100%;
-    background: #131313;
     height: 83px;
     align-items: center;
 }
