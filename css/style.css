@@ -11,6 +11,68 @@
   max-width: 1256px;
   margin: auto; }
 
+.block {
+  -webkit-animation: show 2s ease 2s infinite;
+  animation: show 2s ease 2s infinite; }
+
+.footer-policy-link {
+  font-size: 12px; }
+
+.footer {
+  margin-top: 60px;
+  background-color: #131313;
+  padding: 59px 0;
+  color: #666666; }
+
+p {
+  margin-bottom: 14px; }
+
+a {
+  color: #666666;
+  text-decoration: none; }
+
+a:hover {
+  color: #ffffff; }
+
+small {
+  display: block;
+  margin-top: 56px;
+  line-height: 16px;
+  font-size: 10px;
+  min-width: 80%; }
+
+ul {
+  padding: 0;
+  list-style: none; }
+
+ul li {
+  line-height: 32px; }
+
+.footer-contacts, .footer-social-links {
+  text-align: right; }
+
+.footer-contacts_phone {
+  font-weight: 400;
+  font-size: 20px;
+  color: #009adf; }
+
+.footer-social-links li {
+  display: inline-block; }
+  .footer-social-links li a {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    background-repeat: 50%;
+    line-height: 42px;
+    margin-left: 10px;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s; }
+  .footer-social-links li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #131313; }
+
 .header {
   background-color: #131313;
   padding: 24px 0; }
