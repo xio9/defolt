@@ -78,6 +78,8 @@
   .hero__text {
     font-size: 22px;
     max-width: 500px; }
+  .hero__button {
+    margin-right: 20px; }
   .hero__instagram {
     position: absolute;
     max-width: 80px;
@@ -178,5 +180,6 @@ ul li {
   box-sizing: border-box; }
 
 body {
+  margin: 0;
   font-family: 'Futura Book', sans-serif;
   font-size: 14px; }
