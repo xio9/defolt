@@ -30,6 +30,11 @@
   animation: show 2s ease 2s infinite; }
 
 .header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 99;
   background-color: #131313;
   padding: 24px 0; }
 
@@ -56,6 +61,7 @@
 
 .hero {
   position: relative;
+  padding-top: 100px;
   background: #131313 url("../img/room.jpg") no-repeat center/cover;
   height: 100vh;
   color: #fff; }
