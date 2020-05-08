@@ -29,6 +29,56 @@
   -webkit-animation: show 2s ease 2s infinite;
   animation: show 2s ease 2s infinite; }
 
+.header {
+  background-color: #131313;
+  padding: 24px 0; }
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.logo {
+  color: #e3b873;
+  text-transform: uppercase; }
+
+.nav__item {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  margin-right: 40px; }
+
+.phone {
+  color: #e3b873; }
+
+.contacts__phone {
+  margin-right: 45px; }
+
+.hero {
+  position: relative;
+  background: #131313 url("../img/room.jpg") no-repeat center/cover;
+  height: 100vh;
+  color: #fff; }
+  .hero__instagram {
+    position: absolute;
+    max-width: 80px;
+    height: 100%;
+    top: 0; }
+
+.instagram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #131313; }
+  .instagram__link {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #e3b873;
+    transform: rotate(90deg); }
+
+.title {
+  margin: 0; }
+
 .footer-policy-link {
   font-size: 12px; }
 
@@ -86,31 +136,6 @@ ul li {
   .footer-social-links li a:hover {
     background-color: rgba(255, 255, 255, 0.1);
     color: #131313; }
-
-.header {
-  background-color: #131313;
-  padding: 24px 0; }
-
-.menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-
-.logo {
-  color: #e3b873;
-  text-transform: uppercase; }
-
-.nav__item {
-  text-decoration: none;
-  color: #fff;
-  text-transform: uppercase;
-  margin-right: 40px; }
-
-.phone {
-  color: #e3b873; }
-
-.contacts__phone {
-  margin-right: 45px; }
 
 body {
   font-family: 'Futura Book', sans-serif;
