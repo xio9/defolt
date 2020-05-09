@@ -98,6 +98,14 @@
     text-transform: uppercase;
     color: #fff;
     text-decoration: none; }
+    .hero__scroll-down::after {
+      content: '';
+      background: url("../img/yes.svg") no-repeat center;
+      width: 30px;
+      height: 30px;
+      border: 2px solid #e3b873;
+      border-radius: 50%;
+      margin-left: 12px; }
 
 .instagram {
   display: flex;
@@ -105,10 +113,19 @@
   align-items: center;
   background-color: #131313; }
   .instagram__link {
+    display: flex;
+    align-items: center;
     text-transform: uppercase;
     text-decoration: none;
     color: #e3b873;
-    transform: rotate(90deg); }
+    transform: rotate(90deg);
+    line-height: 0.8; }
+    .instagram__link::after {
+      content: '';
+      width: 50px;
+      height: 1px;
+      background-color: #e3b873;
+      margin-left: 8px; }
 
 .title {
   margin: 0;
