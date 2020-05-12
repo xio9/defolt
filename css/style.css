@@ -231,15 +231,6 @@ img {
   background-color: #e3b873;
   color: #fff; }
 
-@media screen and (max-width: 760px) {
-  .row {
-    align-items: center;
-    flex-direction: column; }
-  .types__card {
-    margin-bottom: 5rem; }
-  .card__text {
-    margin-left: 0; } }
-
 .footer-policy-link {
   font-size: 12px; }
 
