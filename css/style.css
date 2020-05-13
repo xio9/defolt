@@ -213,10 +213,10 @@ img {
   margin-bottom: 0.7rem; }
 
 .card__list {
+  list-style-type: disc;
   margin: 0;
   padding: 0 0 0 1rem;
   font-size: 1.07rem;
-  line-height: 1.79rem;
   color: #959595;
   margin-bottom: 2.5rem; }
 
@@ -230,6 +230,9 @@ img {
   text-transform: uppercase;
   background-color: #e3b873;
   color: #fff; }
+
+.card__item {
+  line-height: 1.78rem; }
 
 .design__section-title {
   margin-bottom: 2.78rem;
