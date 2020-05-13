@@ -24,7 +24,7 @@
           <div class="contacts menu__contacts">
             <a href="+7(999)-768-32-99" class="phone contacts__phone">
               +7 (999) 768-32-99</a>
-            <button class="button contacts__button button--primary">
+            <button class="button contacts__button button--primary" data-toggle="modal">
               Заказать звонок</button>
           </div>
         </div>
@@ -47,7 +47,7 @@
            рабочего времени до 45 дней и 20% от стоимости материалов за счет организации 
            работы</p>
            <div class="buttons">
-           <button class="button hero__button button--primary">Рассчитать стоимость</button>
+           <button class="button hero__button button--primary" data-toggle="modal">Рассчитать стоимость</button>
            <button class="button hero__button button--outline">Отправить заявку</button>
           </div>
           <!-- /Buttons -->
@@ -323,7 +323,7 @@
       </section>
       <!-- section design -->
     </main>
-    <div class="modal">
+    <div class="modal modal--visible">
       <div class="modal__dialog">
         <button class="modal__close"></button>
         <h3 class="modal__title">Оставьте заявку и наш менеджер 
@@ -350,5 +350,6 @@
       <!-- /.modal__dialog -->
     </div>
     <!-- /.modal -->
+    <script src="js/main.js"></script>
   </body>
 </html>
