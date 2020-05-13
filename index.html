@@ -231,8 +231,8 @@
                     <!-- /.card__item -->                   
                   </ul>
                   <!-- /.card__list -->
-                  <strong class="card__pricetag">
-                    от 150 руб / M<sup>2</sup>
+                  <strong class="design--card__pricetag">
+                    150 руб / M<sup>2</sup>
                   </strong>
                 </div>
                 <!-- /.card__text -->
@@ -264,8 +264,8 @@
                     <!-- /.card__item -->
                   </ul>
                   <!-- /.card__list -->
-                  <strong class="card__pricetag">
-                    от 400 руб / M<sup>2</sup>
+                  <strong class="design--card__pricetag">
+                    400 руб / M<sup>2</sup>
                   </strong>
                 </div>
                 <!-- /.card__text -->
@@ -307,8 +307,8 @@
                     <!-- /.card__item -->
                   </ul>
                   <!-- /.card__list -->
-                  <strong class="card__pricetag">
-                    от 900 руб / M<sup>2</sup>
+                  <strong class="design--card__pricetag">
+                    900 руб / M<sup>2</sup>
                   </strong>
                 </div>
                 <!-- /.card__text -->
@@ -323,5 +323,32 @@
       </section>
       <!-- section design -->
     </main>
+    <div class="modal">
+      <div class="modal__dialog">
+        <button class="modal__close"></button>
+        <h3 class="modal__title">Оставьте заявку и наш менеджер 
+          свяжется с вами </h3>
+          <form action="#" class="form modal__form">
+            <label for="user-name" class="label form__label">Имя</label>
+            <input type="text" class="input form__input" id="user-name">
+            <label for="user-phone" class="label form__label">Телефон</label>
+            <input type="tel" class="input form__input" id="user-phone">
+            <label for="user-email" class="label form__label">Email</label>
+            <input type="email" class="input form__input" id="user-email">
+            <div class="policy">
+              <input type="checkbox" name="policy-checkbox" id="policy-checkbox">
+              <label for="policy-checkbox">Я соглашаюсь с обработкой данных</label>
+            </div>
+            <!-- /.policy -->
+            <button class="button button--primary modal__button">
+              Отправить заявку
+            </button> 
+            <!-- /.button button--primary modal__button -->
+          </form>
+          <!-- /.form modal__form -->
+      </div>
+      <!-- /.modal__dialog -->
+    </div>
+    <!-- /.modal -->
   </body>
 </html>
