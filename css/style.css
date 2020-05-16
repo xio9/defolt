@@ -31,6 +31,30 @@
     border: 1px solid #fff;
     background-color: transparent;
     color: #fff; }
+  .button__scroll-up {
+    background-color: #e3b873;
+    color: #fff;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
+    transition: box-shadow 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    bottom: 0;
+    min-width: 17.6rem;
+    min-height: 6.92rem;
+    background-color: #131313;
+    text-transform: uppercase;
+    color: #fff;
+    text-decoration: none; }
+    .button__scroll-up::after {
+      content: '';
+      background: url("../img/yes.svg") no-repeat center;
+      width: 30px;
+      height: 30px;
+      border: 2px solid #e3b873;
+      border-radius: 50%;
+      margin-left: 12px; }
 
 .label {
   font-size: 1.07rem; }
@@ -82,6 +106,17 @@
   -webkit-animation: show 2s ease 2s infinite;
   animation: show 2s ease 2s infinite; }
 
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.col-30 {
+  flex-basis: 30%; }
+
+.col-50 {
+  flex-basis: 50%; }
+
 *, *:before, *:after {
   box-sizing: border-box; }
 
@@ -95,6 +130,45 @@ body {
 
 img {
   max-width: 100%; }
+
+.section {
+  padding: 60px 0; }
+  .section--dark {
+    background-color: #131313;
+    color: #fff; }
+  .section-title {
+    text-align: center; }
+    .section-title--left {
+      text-align: left; }
+    .section-title__heading {
+      line-height: 138%;
+      text-transform: uppercase;
+      font-family: 'Yeseva One', cursive; }
+      .section-title__heading--primary {
+        color: #e3b873; }
+    .section-title__word {
+      display: flex;
+      align-items: center; }
+      .section-title__word::after {
+        content: '';
+        width: 90px;
+        height: 1px;
+        background-color: #e3b873;
+        margin-left: 2rem; }
+    .section-title__text {
+      font-size: 1.28rem;
+      line-height: 2.07rem;
+      max-width: 31.57rem; }
+    .section-title__image {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .section-title__image::after, .section-title__image::before {
+        content: '';
+        width: 32px;
+        height: 2px;
+        background-color: #e3b873;
+        margin: 0 10px; }
 
 .header {
   position: fixed;
@@ -146,6 +220,15 @@ img {
     width: 100%;
     height: 100%;
     background-color: rgba(19, 19, 19, 0.7); }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 3.46rem;
+    background-color: #131313; }
   .hero__content {
     position: relative;
     max-width: 47.85rem;
@@ -165,6 +248,7 @@ img {
     justify-content: center;
     align-items: center;
     position: absolute;
+    z-index: 3;
     left: 0;
     bottom: 0;
     min-width: 17.6rem;
@@ -210,36 +294,11 @@ img {
   .title--primary {
     color: #e3b873; }
 
-.section {
-  padding: 60px 0; }
-  .section-title {
-    text-align: center;
-    text-transform: uppercase;
-    font-family: 'Yeseva One', cursive; }
-    .section-title__image {
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      .section-title__image::after, .section-title__image::before {
-        content: '';
-        width: 32px;
-        height: 2px;
-        background-color: #e3b873;
-        margin: 0 10px; }
-
 .types__section-title {
   margin-bottom: 2rem; }
 
 .section-title__heading {
   font-size: 1.44rem; }
-
-.row {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between; }
-
-.col {
-  flex-basis: 32%; }
 
 .card__text {
   position: relative;
