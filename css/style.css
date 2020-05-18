@@ -138,6 +138,12 @@ img {
     color: #fff; }
   .section-title {
     text-align: center; }
+    .section-title__about {
+      font-family: 'Yeseva One', cursive;
+      text-transform: uppercase;
+      font-size: 1.07rem;
+      line-height: 1.5rem;
+      color: #fff; }
     .section-title--left {
       text-align: left; }
     .section-title__heading {
@@ -155,6 +161,15 @@ img {
         height: 1px;
         background-color: #e3b873;
         margin-left: 2rem; }
+    .section-title__target {
+      display: flex;
+      align-items: center; }
+      .section-title__target::after {
+        content: '';
+        width: 90px;
+        height: 1px;
+        background-color: #e3b873;
+        margin-left: 4rem; }
     .section-title__text {
       font-size: 1.28rem;
       line-height: 2.07rem;
@@ -409,6 +424,24 @@ img {
   text-transform: uppercase;
   background-color: #e3b873;
   color: #fff; }
+
+.swiper-slide {
+  display: flex; }
+  .swiper-slide__block {
+    flex-basis: 50%; }
+  .swiper-slide__room {
+    display: flex;
+    align-items: center; }
+  .swiper-slide__away {
+    font-family: 'Yeseva One', cursive;
+    text-transform: uppercase;
+    font-size: 1.07rem;
+    line-height: 1.64rem;
+    color: #e3b873; }
+  .swiper-slide__story {
+    font-family: 'Futura Book', sans-serif;
+    font-size: 1.07rem;
+    line-height: 1.78rem; }
 
 .footer-policy-link {
   font-size: 12px; }
