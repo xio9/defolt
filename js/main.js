@@ -46,4 +46,35 @@ $(document).ready(function () {
     );
     wow.init();
 
- });
+    // Валидация формы
+    $('.modal__form').validate({
+      errorClass: "invalid",
+      rules: {
+        // строчное правило
+         userName: {
+           required = true,
+           minlenght: 2
+          },
+         userPhone: "required",
+          // правило-объект 
+         userEmail: {
+         required: true,
+         email: true
+       }
+      }, // Сообщения
+      messages: {
+        userName: {
+          required: "Имя обязательно",
+          minlenght: "Имя должно быть не короче двух букв"
+      },
+        userPhone: "Телефон обязателен",
+        userEmail: {
+          required: "Обязательно укажите email",
+          email: "Введите в формате: name@domain.com"
+        }
+      }
+     });
+
+     //Маска для телефона
+     $('type=tel]').mask('+7(000) 000-00-00', {placeholder: '+7(___) ___-__-__'})
+    });

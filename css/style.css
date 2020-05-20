@@ -87,7 +87,8 @@
 
 .policy__label {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  font-size: 1.142rem; }
   .policy__label::before {
     content: '';
     width: 18px;
@@ -96,6 +97,14 @@
     border-radius: 1px;
     cursor: pointer;
     margin-right: 0.64rem; }
+  .policy__label--center {
+    justify-content: center; }
+
+label.invalid {
+  color: tomato; }
+
+input.invalid {
+  border-bottom: 1px solid tomato; }
 
 .container {
   width: 85%;
@@ -472,33 +481,32 @@ img {
 .card__item {
   line-height: 1.8rem; }
 
-.design__section-title {
-  margin-bottom: 2.78rem;
-  font-family: 'Yeseva One', cursive; }
-
-.design__section-text {
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 52.92rem;
-  font-family: 'Futura Book', cursive;
-  font-size: 1.42rem;
-  line-height: 1.8rem;
-  text-transform: none; }
-
-.design__section-image {
-  margin-bottom: 1.71rem; }
-
-.design--card__pricetag {
-  padding: 1rem 5.55rem 1.21rem 2.35rem;
-  position: absolute;
-  left: 0;
-  font-size: 1.28rem;
-  font-family: 'Yeseva One', cursive;
-  text-transform: uppercase;
-  background-color: #e3b873;
-  color: #fff; }
+.design {
+  padding-bottom: 30rem; }
+  .design__section-title {
+    margin-bottom: 2.78rem;
+    font-family: 'Yeseva One', cursive; }
+  .design__section-text {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 52.92rem;
+    font-family: 'Futura Book', cursive;
+    font-size: 1.42rem;
+    line-height: 1.8rem;
+    text-transform: none; }
+  .design__section-image {
+    margin-bottom: 1.71rem; }
+  .design--card__pricetag {
+    padding: 1rem 5.55rem 1.21rem 2.35rem;
+    position: absolute;
+    left: 0;
+    font-size: 1.28rem;
+    font-family: 'Yeseva One', cursive;
+    text-transform: uppercase;
+    background-color: #e3b873;
+    color: #fff; }
 
 .swiper-slide {
   display: flex; }
@@ -544,63 +552,49 @@ img {
   width: auto;
   bottom: -2px; }
 
-.footer-policy-link {
-  font-size: 12px; }
-
 .footer {
-  margin-top: 60px;
-  background-color: #131313;
-  padding: 59px 0;
-  color: #666666; }
-
-p {
-  margin-bottom: 14px; }
-
-a {
-  color: #666666;
-  text-decoration: none; }
-
-a:hover {
-  color: #ffffff; }
-
-small {
-  display: block;
-  margin-top: 56px;
-  line-height: 16px;
-  font-size: 10px;
-  min-width: 80%; }
-
-ul {
-  padding: 0;
-  list-style: none; }
-
-ul li {
-  line-height: 32px; }
-
-.footer-contacts, .footer-social-links {
-  text-align: right; }
-
-.footer-contacts_phone {
-  font-weight: 400;
-  font-size: 20px;
-  color: #009adf; }
-
-.footer-social-links li {
-  display: inline-block; }
-  .footer-social-links li a {
-    display: inline-block;
-    width: 42px;
-    height: 42px;
-    background-color: rgba(255, 255, 255, 0.1);
+  padding-top: 3rem;
+  background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover; }
+  .footer__wrap {
+    background-color: #181818;
+    max-width: 63.07rem;
+    margin: auto;
+    margin-top: -20rem;
+    margin-bottom: 3.714rem;
+    padding: 2.5rem; }
+  .footer__title {
+    text-transform: uppercase;
+    font-family: 'Yeseva One', cursive;
+    font-weight: normal;
+    font-size: 1.428rem;
     text-align: center;
-    background-repeat: 50%;
-    line-height: 42px;
-    margin-left: 10px;
-    transition: all 0.2s;
-    -webkit-transition: all 0.2s; }
-  .footer-social-links li a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #131313; }
+    margin-top: 0;
+    margin-bottom: 3.214rem; }
+  .footer__form {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: space-between;
+    max-width: 37.142rem; }
+  .footer__input {
+    padding-top: 0.3rem; }
+    .footer__input-group {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 45%;
+      margin-bottom: 3.2rem; }
+      .footer__input-group--full-width {
+        flex-basis: 100%;
+        margin-bottom: 2rem; }
+  .footer__policy {
+    flex-basis: 100%;
+    margin-bottom: 3.6rem; }
+  .footer__button {
+    margin: auto;
+    padding: 1.285rem 4.785rem; }
+  .footer__menu {
+    background-color: #131313;
+    padding: 4.285rem 0; }
 
 .modal {
   display: flex;
@@ -644,10 +638,12 @@ ul li {
   .modal__form {
     display: flex;
     flex-direction: column; }
-  .modal__input {
+  .modal__input-group {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 3.482rem; }
-    .modal__input:last-of-type {
-      margin-bottom: 1rem; }
+  .modal__input:last-of-type {
+    margin-bottom: 1rem; }
   .modal__policy {
     margin-bottom: 2.7rem; }
   .modal__button {
