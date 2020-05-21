@@ -58,6 +58,7 @@ $(document).ready(function () {
           minlength: 2
           },
          userPhone: "required",
+         policyCheckbox: "required",
           // правило-объект 
          userEmail: {
          required: true,
@@ -70,6 +71,7 @@ $(document).ready(function () {
           minlength: "Имя должно быть не короче двух букв"
       },
         userPhone: "Телефон обязателен",
+        policyCheckbox: "Необходимо нажать",
         userEmail: {
           required: "Обязательно укажите email",
           email: "Введите в формате: name@domain.com"
@@ -81,12 +83,12 @@ $(document).ready(function () {
     $('.footer__form').validate({
       errorClass: "invalid",
       rules: {
-        // строчное правило
          userName: {
           required : true,
           minlength: 2
           },
          userPhone: "required",
+         policyCheckbox: "required",
           // правило-объект 
          userEmail: {
          required: true,
@@ -99,6 +101,7 @@ $(document).ready(function () {
           minlength: "Имя должно быть не короче двух букв"
       },
         userPhone: "Телефон обязателен",
+        policyCheckbox: "Необходимо нажать",
         userEmail: {
           required: "Обязательно укажите email",
           email: "Введите в формате: name@domain.com"
@@ -116,6 +119,7 @@ $(document).ready(function () {
           minlength: 2
           },
          userPhone: "required",
+         policyCheckbox: "required",
           // правило-объект 
          userEmail: {
          required: true,
@@ -128,6 +132,7 @@ $(document).ready(function () {
           minlength: "Имя должно быть не короче двух букв"
       },
         userPhone: "Телефон обязателен",
+        policyCheckbox: "Необходимо нажать",
         userEmail: {
           required: "Обязательно укажите email",
           email: "Введите в формате: name@domain.com"
