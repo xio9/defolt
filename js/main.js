@@ -1,6 +1,6 @@
 $(document).ready(function () {
     var modal = $('.modal'),
-        modalBtn = $('[data-toggle="modal"]'),
+        modalBtn = $('[data-toggle=modal]'),
         closeBtn = $('.modal__close');
     
     modalBtn.on('click', function () {
@@ -25,6 +25,8 @@ $(document).ready(function () {
     var next = $('.swiper-button-next');
     var prev = $('.swiper-button-prev');
     var bullets = $('.swiper-pagination');
+
+
 
     next.css('left', prev.width() + 10 + bullets.width() + 10)
     bullets.css('left', prev.width() + 10)

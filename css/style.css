@@ -558,6 +558,25 @@ img {
 
 .clients {
   padding-bottom: 30rem; }
+  .clients__heading {
+    margin: auto;
+    text-align: center;
+    max-width: 25.71rem; }
+    .clients__heading__title {
+      text-transform: uppercase;
+      font-size: 1.42rem;
+      line-height: 2rem;
+      margin-bottom: 0.95rem;
+      color: #131313;
+      font-family: 'Yeseva One', cursive; }
+    .clients__heading__icon {
+      margin-bottom: 1.22rem; }
+    .clients__heading__text {
+      margin-bottom: 3.78rem;
+      font-size: 1.42rem;
+      line-height: 1.92rem;
+      font-family: 'Futura Book', cursive;
+      color: #131313; }
   .clients__card__photo {
     max-width: 10.42rem;
     min-height: 6.85rem;
