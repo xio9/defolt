@@ -420,6 +420,11 @@ img {
   flex-direction: column;
   flex-basis: 30%; }
 
+.control__check-group {
+  margin: auto;
+  display: flex;
+  flex-direction: column; }
+
 .control__label {
   margin-bottom: -7px; }
 
