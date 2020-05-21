@@ -75,7 +75,83 @@ $(document).ready(function () {
       }
      });
 
+     // Валидация формы
+    $('.footer__form').validate({
+      errorClass: "invalid",
+      rules: {
+        // строчное правило
+         userName: {
+          required : true,
+          minlength: 2
+          },
+         userPhone: "required",
+          // правило-объект 
+         userEmail: {
+         required: true,
+         email: true
+       }
+      }, // Сообщения
+      messages: {
+        userName: {
+          required: "Имя обязательно",
+          minlength: "Имя должно быть не короче двух букв"
+      },
+        userPhone: "Телефон обязателен",
+        userEmail: {
+          required: "Обязательно укажите email",
+          email: "Введите в формате: name@domain.com"
+        }
+      }
+     });
+
+     // Валидация формы
+    $('.control__form').validate({
+      errorClass: "invalid",
+      rules: {
+        // строчное правило
+         userName: {
+          required : true,
+          minlength: 2
+          },
+         userPhone: "required",
+          // правило-объект 
+         userEmail: {
+         required: true,
+         email: true
+       }
+      }, // Сообщения
+      messages: {
+        userName: {
+          required: "Имя обязательно",
+          minlength: "Имя должно быть не короче двух букв"
+      },
+        userPhone: "Телефон обязателен",
+        userEmail: {
+          required: "Обязательно укажите email",
+          email: "Введите в формате: name@domain.com"
+        }
+      }
+     });
+
+
      //Маска для телефона
       $('[type=tel]').mask('+7(000) 000-00-00', { placeholder: "+7(___) ___-__-__"});
 
+    // Яндекс карта
+    // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
+    function init(){
+        // Создание карты.
+        var myMap = new ymaps.Map("map", {
+            // Координаты центра карты.
+            // Порядок по умолчанию: «широта, долгота».
+            // Чтобы не определять координаты центра карты вручную,
+            // воспользуйтесь инструментом Определение координат.
+            center: [55.76, 37.64],
+            // Уровень масштабирования. Допустимые значения:
+            // от 0 (весь мир) до 19.
+            zoom: 7
+        });
+    }
     });
