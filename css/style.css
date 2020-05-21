@@ -82,7 +82,7 @@
 .policy__checkbox {
   opacity: 0;
   visibility: hidden; }
-  .policy__checkbox:checked + .policy__label::before {
+  .policy__checkbox:checked ~ .policy__label::before {
     background: #e3b873 url("../img/check.svg") no-repeat center/0.8rem; }
 
 .policy__label {
@@ -443,6 +443,12 @@ img {
 .video__play {
   position: relative;
   margin: auto; }
+
+#policyCheckbox-error {
+  margin-left: 1.5rem; }
+
+#userQuestion-error {
+  margin-left: 1.5rem; }
 
 .types__section-title {
   margin-bottom: 2rem; }

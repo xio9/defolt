@@ -71,7 +71,7 @@ $(document).ready(function () {
           minlength: "Имя должно быть не короче двух букв"
       },
         userPhone: "Телефон обязателен",
-        policyCheckbox: "Необходимо нажать",
+        policyCheckbox: "Поле обязательно для заполнения",
         userEmail: {
           required: "Обязательно укажите email",
           email: "Введите в формате: name@domain.com"
@@ -88,7 +88,7 @@ $(document).ready(function () {
           minlength: 2
           },
          userPhone: "required",
-         policyCheckbox: "required",
+         userQuestion: "required",
           // правило-объект 
          userEmail: {
          required: true,
@@ -101,7 +101,7 @@ $(document).ready(function () {
           minlength: "Имя должно быть не короче двух букв"
       },
         userPhone: "Телефон обязателен",
-        policyCheckbox: "Необходимо нажать",
+        userQuestion: "Поле обязательно для заполнения",
         userEmail: {
           required: "Обязательно укажите email",
           email: "Введите в формате: name@domain.com"
@@ -132,7 +132,7 @@ $(document).ready(function () {
           minlength: "Имя должно быть не короче двух букв"
       },
         userPhone: "Телефон обязателен",
-        policyCheckbox: "Необходимо нажать",
+        policyCheckbox: "Поле обязательно для заполнения",
         userEmail: {
           required: "Обязательно укажите email",
           email: "Введите в формате: name@domain.com"
