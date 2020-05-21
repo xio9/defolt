@@ -481,32 +481,33 @@ img {
 .card__item {
   line-height: 1.8rem; }
 
-.design {
-  padding-bottom: 30rem; }
-  .design__section-title {
-    margin-bottom: 2.78rem;
-    font-family: 'Yeseva One', cursive; }
-  .design__section-text {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 52.92rem;
-    font-family: 'Futura Book', cursive;
-    font-size: 1.42rem;
-    line-height: 1.8rem;
-    text-transform: none; }
-  .design__section-image {
-    margin-bottom: 1.71rem; }
-  .design--card__pricetag {
-    padding: 1rem 5.55rem 1.21rem 2.35rem;
-    position: absolute;
-    left: 0;
-    font-size: 1.28rem;
-    font-family: 'Yeseva One', cursive;
-    text-transform: uppercase;
-    background-color: #e3b873;
-    color: #fff; }
+.design__section-title {
+  margin-bottom: 2.78rem;
+  font-family: 'Yeseva One', cursive; }
+
+.design__section-text {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 52.92rem;
+  font-family: 'Futura Book', cursive;
+  font-size: 1.42rem;
+  line-height: 1.8rem;
+  text-transform: none; }
+
+.design__section-image {
+  margin-bottom: 1.71rem; }
+
+.design--card__pricetag {
+  padding: 1rem 5.55rem 1.21rem 2.35rem;
+  position: absolute;
+  left: 0;
+  font-size: 1.28rem;
+  font-family: 'Yeseva One', cursive;
+  text-transform: uppercase;
+  background-color: #e3b873;
+  color: #fff; }
 
 .swiper-slide {
   display: flex; }
@@ -551,6 +552,43 @@ img {
 .swiper-container-horizontal > .swiper-pagination-bullets {
   width: auto;
   bottom: -2px; }
+
+.clients {
+  padding-bottom: 30rem; }
+  .clients__card__photo {
+    max-width: 10.42rem;
+    min-height: 6.85rem;
+    margin-right: 2rem;
+    border-radius: 100%; }
+  .clients__card__title {
+    display: flex;
+    margin-bottom: 0.85rem;
+    font-size: 1.28rem;
+    font-family: 'Yeseva One', cursive; }
+  .clients__card__text {
+    margin-bottom: 2.57rem;
+    font-size: 1.07rem;
+    line-height: 1.92rem;
+    font-family: 'Futura Book', cursive;
+    color: #666666; }
+  .clients__wrap {
+    display: flex;
+    max-width: 21rem; }
+    .clients__wrap__info {
+      align-items: center;
+      display: flex;
+      background-color: #e3b873; }
+      .clients__wrap__info--first {
+        margin-right: 1px; }
+    .clients__wrap__num {
+      padding-right: 7rem;
+      padding-left: 2rem;
+      font-size: 1.21rem;
+      font-family: 'Yeseva One', cursive;
+      text-transform: uppercase;
+      color: #fff; }
+    .clients__wrap__image {
+      padding: 0.785rem 1.071rem 0.785rem 1.214rem; }
 
 .footer {
   padding-top: 3rem;

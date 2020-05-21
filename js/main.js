@@ -52,8 +52,8 @@ $(document).ready(function () {
       rules: {
         // строчное правило
          userName: {
-           required = true,
-           minlenght: 2
+          required : true,
+          minlength: 2
           },
          userPhone: "required",
           // правило-объект 
@@ -65,7 +65,7 @@ $(document).ready(function () {
       messages: {
         userName: {
           required: "Имя обязательно",
-          minlenght: "Имя должно быть не короче двух букв"
+          minlength: "Имя должно быть не короче двух букв"
       },
         userPhone: "Телефон обязателен",
         userEmail: {
@@ -76,5 +76,6 @@ $(document).ready(function () {
      });
 
      //Маска для телефона
-     $('type=tel]').mask('+7(000) 000-00-00', {placeholder: '+7(___) ___-__-__'})
+      $('[type=tel]').mask('+7(000) 000-00-00', { placeholder: "+7(___) ___-__-__"});
+
     });
