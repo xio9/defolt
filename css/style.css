@@ -432,6 +432,9 @@ img {
   .control__policy-label {
     justify-content: center; }
 
+.control__input {
+  color: #e3b873; }
+
 .video__play {
   position: relative;
   margin: auto; }
@@ -705,6 +708,8 @@ img {
     margin-bottom: 1rem; }
   .modal__policy {
     margin-bottom: 2.7rem; }
+    .modal__policy-label {
+      justify-content: center; }
   .modal__button {
     align-self: flex-end; }
 
