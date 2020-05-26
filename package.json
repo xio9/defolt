@@ -4,6 +4,8 @@
   "main": "index.js",
   "dependencies": {
     "browser-sync": "^2.26.7",
+    "gulp-tinypng-compress": "^1.2.5",
+    "imagemin": "^7.0.1",
     "resolve-url": "^0.2.1",
     "urix": "^0.1.0"
   },

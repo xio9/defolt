@@ -2,6 +2,9 @@ $(document).ready(function () {
     var modal = $('.modal'),
         modalBtn = $('[data-toggle=modal]'),
         closeBtn = $('.modal__close');
+        modalThanks = $('.modal__thanks'),
+        modalThanksDialog = $('.modal__thanks__dialog'),
+        closeBtnThanks = $('.modal__thanks__close');;
     
     modalBtn.on('click', function () {
         modal.toggleClass('modal--visible');
@@ -76,8 +79,30 @@ $(document).ready(function () {
           required: "Обязательно укажите email",
           email: "Введите в формате: name@domain.com"
         }
+      },
+      submitHandler: function(form) {
+        $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $(form).serialize(), 
+          success: function (response) {
+            $(form)[0].reset();
+            modal.toggleClass('modal--visible');
+            modalThanks.toggleClass('modal__thanks--visible');
+            modal.removeClass('modal__thanks--visible');
+            $('.modal__thanks-title').text('Спасибо! Ваша заявка принята. Наш менеджер свяжется с Вами в ближайшее время.');
+          },
+        });
       }
      });
+     closeBtnThanks.on('click', function() {
+      modalThanks.toggleClass('modal__thanks--visible');
+    });
+    modalThanks.on('click', function(e) {
+      if(!modalThanksDialog.is(e.target) && modalThanksDialog.has(e.target).length === 0) {
+        modalThanks.toggleClass('modal__thanks--visible');
+      }
+    });
 
      // Валидация формы
     $('.footer__form').validate({
@@ -106,8 +131,29 @@ $(document).ready(function () {
           required: "Обязательно укажите email",
           email: "Введите в формате: name@domain.com"
         }
+      },
+      submitHandler: function(form) {
+        $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $(form).serialize(), 
+          success: function (response) {
+            $(form)[0].reset();
+            modalThanks.toggleClass('modal__thanks--visible');
+            modal.removeClass('modal__thanks--visible');
+            $('.modal__thanks-title').text('Спасибо! Ваша заявка принята. Наш менеджер свяжется с Вами в ближайшее время.');
+          },
+        });
       }
      });
+     closeBtnThanks.on('click', function() {
+      modalThanks.toggleClass('modal__thanks--visible');
+    });
+    modalThanks.on('click', function(e) {
+      if(!modalThanksDialog.is(e.target) && modalThanksDialog.has(e.target).length === 0) {
+        modalThanks.toggleClass('modal__thanks--visible');
+      }
+    });
 
      // Валидация формы
     $('.control__form').validate({
@@ -137,8 +183,29 @@ $(document).ready(function () {
           required: "Обязательно укажите email",
           email: "Введите в формате: name@domain.com"
         }
+      },
+      submitHandler: function(form) {
+        $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $(form).serialize(), 
+          success: function (response) {
+            $(form)[0].reset();
+            modalThanks.toggleClass('modal__thanks--visible');
+            modal.removeClass('modal__thanks--visible');
+            $('.modal__thanks-title').text('Спасибо! Ваша заявка принята. Наш менеджер свяжется с Вами в ближайшее время.');
+          },
+        });
       }
      });
+     closeBtnThanks.on('click', function() {
+      modalThanks.toggleClass('modal__thanks--visible');
+    });
+    modalThanks.on('click', function(e) {
+      if(!modalThanksDialog.is(e.target) && modalThanksDialog.has(e.target).length === 0) {
+        modalThanks.toggleClass('modal__thanks--visible');
+      }
+    });
 
 
      //Маска для телефона
