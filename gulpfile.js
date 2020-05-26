@@ -72,5 +72,16 @@ function buildJS(done) {
     .pipe(dest('dist/fonts/'));
     done();
   }
-
-exports.serve = bs;
+  function imagemin(done) {
+    src('src/img/**/*.{png,jpg,jpeg}')
+    .pipe(tinypng({
+      key: '2TrP1Hx0xkyH66SCyMKdvKsvrYz49HyP',
+    }))
+    .pipe(dest('dist/img/'));
+    src('src/img/**/*.svg ')
+    .pipe(dest('dist/img/'));
+  
+    done();}
+  
+  exports.serve = bs;
+  exports.build = series(buildCSS, buildJS, html, php, fonts, imagemin);
