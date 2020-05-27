@@ -12,7 +12,7 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
   />
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=1cc1f8c2-125a-423a-acf6-66bff7efbd3d&lang=ru_RU" type="text/javascript">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=1cc1f8c2-125a-423a-acf6-66bff7efbd3d&lang=ru_RU">
     </script>
   </head>
   <body>
@@ -190,13 +190,13 @@
               <div class="swiper-wrapper swiper-no-swiping">
                   <!-- Slides -->
                   <div class="swiper-slide">
-                    <img class="swiper-slide-img" src="./img/project1.jpg" alt="">
+                    <img class="swiper-slide-img" src="./img/project.jpg" alt="">
                   </div>
                   <div class="swiper-slide">
                     <img class="swiper-slide-img" src="./img/room.jpg" alt="">
                   </div>
                   <div class="swiper-slide">
-                    <img class="swiper-slide-img" src="./img/project1.jpg" alt="">
+                    <img class="swiper-slide-img" src="./img/project.jpg" alt="">
                   </div>
               </div>
             </div>
@@ -215,7 +215,7 @@
              </h2>
              <!-- /title-heading -->
              <div class="section-title__image">
-               <img src="img/video.png" alt="">
+               <img src="img/video.jpeg" alt="">
              </div>
              <!-- /title-image -->
            </div>
@@ -244,7 +244,6 @@
             <button class="button button--primary control__button wow animate__animated animate__heartBeat">
               Отправить
             </button> 
-            <!-- /.button button--primary control__button -->
             <div class="control__check-group">
             <div class="policy control__policy">  
               <input type="checkbox" name="policyCheckbox" id="policy-checkbox" class="policy__checkbox" checked>      
@@ -274,7 +273,7 @@
           <div class="row">
             <div class="col-30 wow animate__animated animate__fadeInLeftBig animate__delay-0.5s">
               <div class="card types__card">
-                <img src="img/room-card1.png" alt="Косметический ремонт" class="card__image">
+                <img src="img/room-card1.jpeg" alt="Косметический ремонт" class="card__image">
                 <!-- /.img card__image -->
                 <div class="card__text">
                   <h3 class="card__title">Косметический ремонт</h3>
@@ -307,7 +306,7 @@
             <!-- /.col -->
             <div class="col-30 wow animate__animated animate__fadeInLeftBig animate__delay-1s">
               <div class="card types__card">
-                <img src="img/room-card2.png" alt="Капитальный ремонт" class="card__image">
+                <img src="img/room-card2.jpeg" alt="Капитальный ремонт" class="card__image">
                 <!-- /.img card__image -->
                 <div class="card__text">
                   <h3 class="card__title">Капитальный ремонт</h3>
@@ -340,7 +339,7 @@
             <!-- /.col -->
             <div class="col-30 wow animate__animated animate__fadeInLeftBig animate__delay-2s">
               <div class="card types__card">
-                <img src="img/room-card3.png" alt="Дизайнерский ремонт" class="card__image">
+                <img src="img/room-card3.jpeg" alt="Дизайнерский ремонт" class="card__image">
                 <!-- /.img card__image -->
                 <div class="card__text">
                   <h3 class="card__title">Дизайнерский ремонт</h3>
@@ -398,7 +397,7 @@
           <div class="row">
             <div class="col-30">
               <div class="card design__card">
-                <img src="img/room-card1.png" alt="Косметический ремонт" class="card__image">
+                <img src="img/room-card1.jpeg" alt="Косметический ремонт" class="card__image">
                 <!-- /.img card__image -->
                 <div class="card__text">
                   <h3 class="card__title">Минимальный</h3>
@@ -425,7 +424,7 @@
             <!-- /.col -->
             <div class="col-30">
               <div class="card design__card">
-                <img src="img/room-card3.png" alt="Капитальный ремонт" class="card__image">
+                <img src="img/room-card3.jpeg" alt="Капитальный ремонт" class="card__image">
                 <!-- /.img card__image -->
                 <div class="card__text">
                   <h3 class="card__title">Стандартный</h3>
@@ -458,7 +457,7 @@
             <!-- /.col -->
             <div class="col-30">
               <div class="card types__card">
-                <img src="img/room-card4.png" alt="Дизайнерский ремонт" class="card__image">
+                <img src="img/room-card4.jpeg" alt="Дизайнерский ремонт" class="card__image">
                 <!-- /.img card__image -->
                 <div class="card__text">
                   <h3 class="card__title">Полный</h3>
@@ -525,7 +524,7 @@
             </div>
             <div class="input-group footer__input-group footer__input-group--full-width">
               <label for="user-question" class="label form__label label--light">Email</label>
-              <input type="text" name="userEmail" class="input form__input footer__input input--light" id="footer-user-email" placeholder="Ваш Email">
+              <input type="text" name="userEmail" class="input form__input footer__input input--light" id="user-question" placeholder="Ваш Email">
             </div>
             <div class="control__check-group">
             <div class="policy footer__policy">              
@@ -537,7 +536,6 @@
             <button class="button button--primary footer__button">
               Отправить
             </button> 
-            <!-- /.button button--primary footer__button -->
           </form>
           <!-- /.form footer__form -->
         </div>
@@ -560,9 +558,12 @@
         <!-- /.footer__images -->
       </div>
       <!-- /footer-info -->
-      <div class="map footer__map" id="map">
-      </div>
+      <div class="ymap-container">
+        <div class="loader loader-default"></div>
+        <div id="map-yandex"></div>
     </div>
+    <!-- .ymap-container -->
+  </div>
       <!-- /container -->
       <div class="footer__menu">
         <div class="container">
@@ -605,7 +606,7 @@
             </div>
             <div class="input-group modal__input-group">
               <label for="user-email" class="label form__label label--light">Email</label>
-              <input type="email" name="userEmail" class="input form__input modal__input input--light" id="modal-user-email" placeholder="Ваш email">
+              <input type="email" name="userEmail" class="input form__input modal__input input--light" id="user-email" placeholder="Ваш email">
             </div>
             <div class="control__check-group">
             <div class="policy modal__policy">
@@ -617,7 +618,6 @@
             <button class="button button--primary modal__button">
               Отправить заявку
             </button> 
-            <!-- /.button button--primary modal__button -->
           </form>
           <!-- /.form modal__form -->
       </div>

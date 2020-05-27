@@ -66,12 +66,6 @@ function buildJS(done) {
     .pipe(dest('dist/phpmailer'));
     done();
   }
-  
-  function fonts(done) {
-    src('src/fonts/**/**')
-    .pipe(dest('dist/fonts/'));
-    done();
-  }
   function imagemin(done) {
     src('src/img/**/*.{png,jpg,jpeg}')
     .pipe(tinypng({
@@ -84,4 +78,4 @@ function buildJS(done) {
     done();}
   
   exports.serve = bs;
-  exports.build = series(buildCSS, buildJS, html, php, fonts, imagemin);
+  exports.build = series(buildCSS, buildJS, html, php, imagemin);

@@ -211,59 +211,120 @@ $(document).ready(function () {
      //Маска для телефона
       $('[type=tel]').mask('+7(000) 000-00-00', { placeholder: "+7(___) ___-__-__"});
 
-    // Яндекс карта
-    ymaps.ready(function () {
-      var myMap = new ymaps.Map('map', {
-              center: [55.693662, 37.349749],
-              zoom: 9
-          }, {
-              searchControlProvider: 'yandex#search'
-          }),
-  
-          // Создаём макет содержимого.
-          MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-              '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-          ),
-  
-          myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-              hintContent: 'Собственный значок метки',
-              balloonContent: 'Это красивая метка'
-          }, {
-              // Опции.
-              // Необходимо указать данный тип макета.
-              iconLayout: 'default#image',
-              // Своё изображение иконки метки.
-              iconImageHref: 'img/location.png',
-              // Размеры метки.
-              iconImageSize: [32, 32],
-              // Смещение левого верхнего угла иконки относительно
-              // её "ножки" (точки привязки).
-              iconImageOffset: [-5, -38]
-          }),
-  
-          myPlacemarkWithContent = new ymaps.Placemark([55.661574, 37.573856], {
-              hintContent: 'Собственный значок метки с контентом',
-              balloonContent: 'А эта — новогодняя',
-              iconContent: '12'
-          }, {
-              // Опции.
-              // Необходимо указать данный тип макета.
-              iconLayout: 'default#imageWithContent',
-              // Своё изображение иконки метки.
-              iconImageHref: 'images/ball.png',
-              // Размеры метки.
-              iconImageSize: [48, 48],
-              // Смещение левого верхнего угла иконки относительно
-              // её "ножки" (точки привязки).
-              iconImageOffset: [-24, -24],
-              // Смещение слоя с содержимым относительно слоя с картинкой.
-              iconContentOffset: [15, 15],
-              // Макет содержимого.
-              iconContentLayout: MyIconContentLayout
-          });
-  
-      myMap.geoObjects
-          .add(myPlacemark)
-          .add(myPlacemarkWithContent);
-  });
     });
+//Ymap start
+var spinner = $('.ymap-container').children('.loader');
+var check_if_load = 0;
+var myMapTemp, myPlacemarkTemp;
+
+
+function init () {
+  var myMapTemp = new ymaps.Map("map-yandex", {
+    center: [55.691866, 37.348707],
+    zoom: 9,
+    controls: ['zoomControl', 'fullscreenControl']
+  });
+
+  var myPlacemarkTemp = new ymaps.Placemark([55.691866, 37.348707], {
+      balloonContent: "Здесь может быть ваш адрес",
+  }, {
+      // Опции.
+      // Необходимо указать данный тип макета.
+      iconLayout: 'default#imageWithContent',
+      // Своё изображение иконки метки.
+      iconImageHref: 'img/location.jpeg',
+      // Размеры метки.
+      iconImageSize: [32, 32],
+      // Смещение левого верхнего угла иконки относительно
+      // её "ножки" (точки привязки).
+      iconImageOffset: [-25, -50],
+  });
+  
+  myMapTemp.geoObjects.add(myPlacemarkTemp);
+
+  //Получаем первый экземпляр коллекции слоев, потом первый слой коллекции
+  var layer = myMapTemp.layers.get(0).get(0);
+
+  //Решение по callback-у для определния полной загрузки карты: http://ru.stackoverflow.com/questions/463638/callback-загрузки-карты-yandex-map
+  waitForTilesLoad(layer).then(function() {
+    //Скрываем
+    spinner.removeClass('is-active');
+  });
+}
+
+function waitForTilesLoad(layer) {
+  return new ymaps.vow.Promise(function (resolve, reject) {
+    var tc = getTileContainer(layer), readyAll = true;
+    tc.tiles.each(function (tile, number) {
+      if (!tile.isReady()) {
+        readyAll = false;
+      }
+    });
+    if (readyAll) {
+      resolve();
+    } else {
+      tc.events.once("ready", function() {
+        resolve();
+      });
+    }
+  });
+}
+
+function getTileContainer(layer) {
+  for (var k in layer) {
+    if (layer.hasOwnProperty(k)) {
+      if (
+        layer[k] instanceof ymaps.layer.tileContainer.CanvasContainer
+        || layer[k] instanceof ymaps.layer.tileContainer.DomContainer
+      ) {
+        return layer[k];
+      }
+    }
+  }
+  return null;
+}
+
+function loadScript(url, callback){
+
+  var script = document.createElement("script");
+
+  if (script.readyState){  //IE
+    script.onreadystatechange = function(){
+      if (script.readyState == "loaded" ||
+              script.readyState == "complete"){
+        script.onreadystatechange = null;
+        callback();
+      }
+    };
+  } else {  //Другие браузеры
+    script.onload = function(){
+      callback();
+    };
+  }
+
+  script.src = url;
+  document.getElementsByTagName("head")[0].appendChild(script);
+}
+
+var ymap = function() {
+  $('.ymap-container').mouseenter(function(){
+      if (check_if_load == 0) {
+        check_if_load = 1;
+
+        spinner.addClass('is-active');
+
+        loadScript("https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;loadByRequire=1", function(){
+           ymaps.load(init);
+        });         
+       
+      }
+    }
+  );  
+}
+
+$(function() {
+
+  //Map Yandex
+  ymap();
+});
+
